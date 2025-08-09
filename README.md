@@ -73,3 +73,18 @@ src/
 tb/
 └── AHB_APB_TOP_tb.v  # Testbench
 ```
+## How to Simulate
+# Compile
+```
+iverilog -o sim.out src/*.v tb/AHB_APB_TOP_tb.v
+```
+# Run simulation
+```
+vvp sim.out
+```
+Modelsim
+```
+vlog src/*.v tb/AHB_APB_TOP_tb.v
+vsim work.AHB_APB_TOP_tb
+run -all
+```
