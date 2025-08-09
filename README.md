@@ -74,11 +74,11 @@ tb/
 └── AHB_APB_TOP_tb.v  # Testbench
 ```
 ## How to Simulate
-# Compile
+Compile
 ```
 iverilog -o sim.out src/*.v tb/AHB_APB_TOP_tb.v
 ```
-# Run simulation
+Run simulation
 ```
 vvp sim.out
 ```
