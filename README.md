@@ -63,12 +63,13 @@ The **Advanced Peripheral Bus** is designed for connecting low-bandwidth, low-po
 ## Directory Structure
 '''
 src/
-├── ahb_apb_top.v # Top-level integration
-├── AHB_Master.v # AHB master logic
-├── ahb_slave.v # AHB slave logic
-├── apb_controller.v # APB control logic
-└── APB_Interface.v # APB interface
-
+├── ahb_apb_top.v  # Top-level integration
+├── AHB_Master.v  # AHB master logic
+├── ahb_slave.v  # AHB slave logic
+├── apb_controller.v  # APB control logic
+└── APB_Interface.v  # APB interface
+'''
+'''
 tb/
-└── AHB_APB_TOP_tb.v # Testbench
+└── AHB_APB_TOP_tb.v  # Testbench
 '''
