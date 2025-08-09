@@ -1,6 +1,3 @@
-# AHB-TO-APB-Bridge-Design
-AMBA AHB-to-APB bridge module implemented in Verilog HDL for SoC bus interfacing.
-
 # AHB to APB Bridge (Verilog HDL)
 
 ## Overview
@@ -9,7 +6,48 @@ It is intended for SoC designs where peripherals connected via APB must interfac
 
 ---
 
-## Features
+## About AMBA
+The **Advanced Microcontroller Bus Architecture (AMBA)** is an open standard from ARM used for on-chip communication in System-on-Chip (SoC) designs.  
+It defines multiple bus protocols optimized for different use cases:
+- **AHB (Advanced High-performance Bus)** – High-speed, pipelined system bus.
+- **APB (Advanced Peripheral Bus)** – Low-power, simple peripheral bus.
+- **AXI (Advanced eXtensible Interface)** – High-performance, high-bandwidth bus for complex SoCs.
+
+---
+
+## About AHB
+The **Advanced High-performance Bus** is part of AMBA 2.0 specification and is used for high-performance, high-bandwidth communication:
+- **Features**:
+  - Single-clock edge protocol.
+  - Pipelined operation for improved throughput.
+  - Burst transfers for efficiency.
+- **Typical Use**:
+  - Connecting CPUs, high-speed memory, DMA controllers, and other performance-critical blocks.
+- **Key Signals**:
+  - `HCLK` – Clock signal.
+  - `HRESETn` – Active-low reset.
+  - `HADDR`, `HWDATA`, `HRDATA` – Address, write data, read data.
+  - `HWRITE` – Write control signal.
+
+---
+
+## About APB
+The **Advanced Peripheral Bus** is designed for connecting low-bandwidth, low-power peripherals:
+- **Features**:
+  - Simple, non-pipelined design.
+  - Reduced signal count for simplicity.
+  - Suitable for devices that do not require high throughput.
+- **Typical Use**:
+  - UART, GPIO, timers, SPI/I2C controllers.
+- **Key Signals**:
+  - `PCLK` – Peripheral clock.
+  - `PRESETn` – Active-low reset.
+  - `PADDR`, `PWDATA`, `PRDATA` – Address, write data, read data.
+  - `PWRITE` – Write control signal.
+
+---
+
+## Features of This Project
 - Implements standard **AMBA AHB** and **AMBA APB** protocols.
 - Modular design split into:
   - **AHB Master** (`AHB_Master.v`)
@@ -22,9 +60,6 @@ It is intended for SoC designs where peripherals connected via APB must interfac
 
 ---
 
-## Block Diagram
-![AHB to APB Block Diagram](docs/block_diagram.png)
-*(Replace with your actual diagram file)*
 
 ---
 
